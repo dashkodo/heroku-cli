@@ -1,6 +1,6 @@
 FROM docker:latest
 
-RUN apt-get update && apt-get -y install curl 
-RUN curl https://cli-assets.heroku.com/install-ubuntu.sh | sh && rm -rf /var/lib/apt/lists/*
+RUN apk add curl 
+RUN curl https://cli-assets.heroku.com/install.sh | sh && rm -rf /var/lib/apt/lists/*
 
 CMD heroku
